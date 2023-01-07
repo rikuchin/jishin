@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+ content="width=device-width,
+ initial-scale=1.0">
+ <meta name="decription"
+ content="地震によって起こる津波、塩害、交通の被害とは？ 
+ いずれ発生する南海トラフや首都直下地震の対策 いまからできること 
+ 各自治体の実施事例を紹介">
+ <link rel="stylesheet" href="地震">
+ <title>プロジェクトスタディ　地震</title>
+ <style>
+ *{
+  margin: 0; padding: 0;
+ }
+ a{
+  color: rgba(255, 197, 139, 0.752);
+  font-weight: bold;
+  text-decoration: none;
+ }
+ .nav_toggle {
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.5rem;;
+}
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #333;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+.nav_toggle i:nth-child(1) {
+  top: -245%;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(2) {
+  top: -210%;
+  bottom: 0;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(3) {
+  top: -175%;
+  bottom: px;
+  margin:auto;
+  margin-left:100%;
+}
+.nav {
+  position: fixed;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+ background-color: rgb(255, 255, 255);
+ z-index: 2;
+ width:100%
+}
+.nav.show {
+  opacity: 1;
+  visibility: visible;}
+ .inner{
+  height: 100px;
+  width: 100%;
+  align-items: center;
+ }
+ .logo{
+  line-height: 100px;
+  font-family: "kokoro";
+  white-space: nowrap;
+  font-size: 20px;
+  padding-left: 80px;
+  text-align: left;
+ box-shadow: 0px 0.1px 2px 2px gray;
+ text-shadow:1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0),
+              -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0),
+              0px 1px 0 rgb(0, 0, 0),  0-1px 0 rgb(0, 0, 0),
+              -1px 0 0 rgb(0, 0, 0), 1px 0 0 rgb(0, 0, 0);
+ }
+ .text{
+  color:rgb(58, 28, 5);
+  font-size:24px;
+  border-bottom:dotted;
+  border-top:dotted;
+ background-color: rgb(213, 207, 99);
+ }
+ .midashi{
+  padding-left: 3%;
+ }
+ .text-area{
+  margin-top: 25px;
+  position: relative;
+  text-align: left;
+  animation:fadeIn 4s;
+  margin-left: 10%;
+  margin-right:10%;
+ }
+ .text2{
+  margin-top: 10px;;
+ }
+ footer{
+  margin-top:50px;
+  height: 60px;
+  background-color: rgb(238, 238, 238);
+  padding-top:30px ;
+  padding-bottom: 20px;
+  box-shadow: 0px -0.1px 2px 0.5px gray;
+ }
+ .foot{
+  color: rgb(0, 0, 0);
+  font-size:7px;
+  margin-left: 2%;
+ }
+ @keyframes fadeIn{
+  0%{opacity: 0;}
+  100%{opacity: 100;}
+ }
+ .list{
+  color: rgb(11, 0, 53);
+  font-weight: bold;
+  text-decoration: none;
+  font-size:20px;
+}
+  li:hover{
+    background-color: rgb(118, 29, 9);
+  }
+  .list:hover{
+    color:#fff;
+  }
+  .segment{
+    border-top: dotted 1px rgb(0, 0, 0);
+    border-spacing: 10px;
+  }
+  .finally-segment{
+    border-top: dotted 1px black;
+    border-bottom: dotted 1px black;
+  }
+  ul{
+    list-style: none;
+  }
+ </style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script>
+  </script>
+ <header class="header">
+  <div class="inner">
+   <div class="header_main">
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+     <h1 class="logo">
+      <a href="#">
+       プロジェクトスタディーズ
+      </a>
+     </h1>
+    </div>
+    <span class="nav_toggle">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+    <nav class="nav">
+      <ul class="nav_menu_ul">
+        <li class="nav_menu_li"><a class="list" href="index.html"><div class="segment">地震について</div></a></li>
+        <li class="nav_menu_li"> <a class="list"href="tatemono.html"><div class="segment">建物</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="infla.html"><div class="segment">インフラ</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="keizai.html"><div class="segment">経済</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="hukkou.html"><div class="segment">復興</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="tsunami.html"><div class="segment">津波</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="koutu.html"><div class="finally-segment">交通</div></a></li>
+      </ul>
+    </nav>    
+   <script>
+    $(".nav_toggle").on("click",function () {
+    $(".nav_toggle, .nav").toggleClass("show");
+  });
+   </script>
+  </div>
+ </header>
+ <div class="text-area">
+  <h1 class="text">
+    <span class="midashi">
+    経済
+  </span>
+    </h1>
+    <p class="text2">
+      地震によって大打撃を受けた被災地は、また、もとの活気ある街を目指して復興を始める。
+      しかし、復興はいつ終わるのだろうか。また、復興はどうすれば加速するのか。
+      本ページでは、過去発生した大震災から、復興の在り方について考察していく。
+      東日本大震災では、「概要」
+      例えば、東日本大震災において、復興庁は、令和3年3月時点で、道のりと見通しとして、主に５つのカテゴリーをもとに、時系列のフローチャートを示している[1]。 2021.3_mchinori.pdf (reconstruction.go.jp)
+      この見通しでは、大きなカテゴリーの5つとして被災者の支援、住まいとまちの復興、産業・生業の再生、福島の復興・再生、その他が挙げられている。
+      そのカテゴリーの中から細分化して、具体的な対策についても述べられている。
+      5つのカテゴリーの1つである被災者支援については、47万人もの避難者がでた発災直後から、2021年3月時点では、避難者は約3.2万人に減少したが、以前避難者がいるの事実がわかる[2]。20220909_kouhou1.pdf (reconstruction.go.jp)
+      このことから、このような大規模な地震が発生すると、東日本大震災では以前復興されていない現状などからも、完全な復興はほぼ不可能であると考えられる。しかし、迅速に復興に取り組むことで、元通りにまではいかないものの、被災地の経済活動などをより早く支えることができる。
+      　迅速な復興は、災害の発生した地域の人々や経済などをより早期に立ち直らせることが可能であるが、迅速な復興をするにはどのようなことが必要なのだろうか。
+      まずは、政府が素早く対策本部を立ち上げ、災害の現状を把握、その後、復興への道のりを明示する必要があるだろう。実際、東日本大震災では14時46分頃に地震が発生し、14時50分には官邸対策室の設置、緊急参集チームを招集し、総理が「①被災状況の確認②住民の安全確保、早期の避難対策③ライフラインの確保、交通網の復旧④住民への的確な情報提供に全力を尽くすこと。」を支持し、15時37分には会議が始まり、様々な被害の現状、被災地での援助活動や、情報の取り扱いなどの内容について話し合われた[3]。1shiryou.pdf (bousai.go.jp)
+      このように迅速な対応をとることによって被災地や、様々な関係機関の混乱を防ぐ効果が期待できる。対応が迅速であれば、復興にかかる労力や時間を抑える事も可能であると考える。
+      対策について取りまとめられた後は、実際に復興に行政が取り組む必要がある。しかし、取り組みの中で行政だけでなく、企業やNPO、地域の住民の取り組みや連携も迅速な復興には必要であろう。復興庁では、東日本大震災での民間企業による復旧復興支援活動について、大きく「事業活動」と「支援活動」に分けている [4]。事業活動は企業の本業であり、例えば、インフラを早期に復旧したことにより、地域の復旧が進んだこと、また、各種サービス業の再開は、地域での暮らしに不可欠であったこと、さらには、事業所の再開による雇用の継続、被災地域内への事業所の移転や新設による雇用の維持、創出は、大きく復興に貢献したとされている[4]。支援活動は、本業とは直接は関係しない支援のことであり、主に、資金の提供、物資の提供、施設の提供、応援型の支援、人材・サービス・ノウハウの提供という五つの観点で支援が行われていたとされている[4]。
+      このように、民間企業が復旧復興支援活動に参加することは、復興に大きく貢献し、スピードを加速させる効果があると考えられる。
+      　震災ボランティア活動においては、東日本大震災において、震災直後は、主として、海外での災害救援活動に従事しているNGOを中心にボランティア活動が開始され、被災された方の救援や、被災地の情報把握に大きな役割を果たしたとされ、その後は、交通事情の改善燃料不足の解消等に伴い、各種NPOや一般の方々のボランティア活動も拡大したとされている[5]。
+      　このように、東日本大震災では、行政、企業、人々が一体となって復興に取り組んできたが、未だに復興は完了していないのが現状である。そもそも、復興のゴールというものは明確ではない。また、どのような災害の後に行われた復旧の後も、元の姿に戻ることはないだろう[6]。しかし、福島第一原子力発電所の事故での影響は未だ色濃く、また、それ以外の一部の被害も完全には復旧されていないのが現状である[7]。よって、東日本大震災よりも過去の、別の震災からの復興事例から復興を考えることも重要であろう。
+      　ここで、阪神淡路大震災を取り上げてみたい。阪神淡路大震災は、1995年1月17日に、淡路島北部を震源として発生したマグニチュード7.3の大地震である。兵庫県の一部では震度7を記録し、死者6434名を出した[8]。この地震が発生してから20年以上経過しているが、その復興として、兵庫県では、阪神・淡路震災復興計画として、復興に取り組んできた。復興の目標年次は、2005年として、「人と自然、人と人、人と社会が調和する「共生社会」づくり」を理念に、主に5つの領域に分けて復興への取り組みを目標化した[9] 兵庫県／阪神・淡路震災復興計画 (hyogo.lg.jp)。大震災によって発生した被害の中でも、生活に多大な支障が懸念される被害においては、迅速な復興が行われた。例えば、ライフラインは、震災発生同年の4月中にすべてが復旧され、鉄道も同年中に復旧された[10]兵庫県／阪神・淡路大震災の支援・復旧状況 (hyogo.lg.jp)。兵庫県では、復興10年の取り組みにおける主な成果と課題について、成果としては、従来の枠組みを超えた新たな制度や仕組みが確立されたこと、また、既存制度・事業等について特例的な運用、拡充等が行われた。さらに、震災を教訓にした新たな視点からの先導的な取り組みが展開されてきたとされている。また、課題としては、やはり、「復興」についての位置づけが今日においても未だ不明確であり、地方主体の進行を制度的・財政的に保証する仕組みも実現していないこと、また 災害対策本部体制の充実や、これから発生しうる大地震に対する広域的な危機管理対策なども課題に挙げられた。、untitled (hyogo.lg.jp) 
+      このように、やはり、復興の定義は曖昧であり、ゴールというものを具体的に設定することの困難さも見て取れる。また、新たな制度が制定されることで迅速な復興につながるという側面も阪神淡路大震災の時にはあった。
+      復興に関するまとめ
+      これまでは、復興に関して、東日本大震災と、阪神•淡路大震災から考えた。ライフラインの復旧や、政府の対応、新たな制度の制定、企業、ボランティアの存在など、さまざまなな要因が迅速な復興につながっていることがわかった。一方、復興の定義は曖昧であり、終わりというものを明確に作ることが困難であることがわかった。また、東日本大震災では、まだ復興が完了したとは言えず、多くの問題がまだ未解決のままである。そして、これから発生しうる大震災に備えての危機管理対策もいまだに不十分である。その上で、復興をより加速させるために、企業やボランティアが集中的に復興に取り組める制度や、のこれからの復興をより迅速にするために、さまざまな可能性を考え、対応に移していくことが重要だ。
+      あらたな提唱
+      総括
+      参考文献
+      [1]”緊急対策本部会議（宮城県沖を震源とする地震）”,内閣府,2011,https://www.bousai.go.jp/2011daishinsai/honbu_kaigi/pdf/1shiryou.pdf.
+      [2]”東日本大震災からの復興に向けた道のりと見通し（イメージ）”,復興庁,2013,https://www.reconstruction.go.jp/topics/20130423_mitinoritomitoshi.pdf.
+      [3]”全国の避難者数”,復興庁,2022,https://www.reconstruction.go.jp/topics/main-cat2/sub-cat2-1/20220909_kouhou1.pdf.
+      [4]
+      [5]
+      [6]
+      [7]
+      </p>
+ </div>
+ <footer>
+   <div class="foot">
+     <div class="info">
+       <p class="tel">電話:
+       <span class="number">012-3456-7890<span></p>
+       <p class="time">
+       受付時間: 平日　<span class="time">AM 10:00～PM 5:00</span>
+       </p>
+     </div>
+        <p>©project study earthquake</p>
+    </div>
+ </footer>
+</body>
+</html>
