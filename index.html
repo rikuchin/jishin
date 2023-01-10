@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+ content="width=device-width,
+ initial-scale=1.0">
+ <meta name="decription"
+ content="地震によって起こる津波、塩害、交通の被害とは？ 
+ いずれ発生する南海トラフや首都直下地震の対策 いまからできること 
+ 各自治体の実施事例を紹介">
+ <link rel="stylesheet" href="地震">
+ <title>プロジェクトスタディ　地震</title>
+ <style>
+ *{
+  margin: 0; padding: 0;
+ }
+ a{
+  color: rgba(255, 197, 139, 0.752);
+  font-weight: bold;
+  text-decoration: none;
+ }
+ .nav_toggle {
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.5rem;;
+}
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #333;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+.nav_toggle i:nth-child(1) {
+  top: -245%;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(2) {
+  top: -210%;
+  bottom: 0;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(3) {
+  top: -175%;
+  bottom: px;
+  margin:auto;
+  margin-left:100%;
+}
+.nav {
+  position: fixed;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+ background-color: rgb(255, 255, 255);
+ z-index: 2;
+ width:100%
+}
+.nav.show {
+  opacity: 1;
+  visibility: visible;}
+ .inner{
+  height: 100px;
+  width: 100%;
+  align-items: center;
+ }
+ .logo{
+  line-height: 100px;
+  font-family: "kokoro";
+  white-space: nowrap;
+  font-size: 20px;
+  padding-left: 80px;
+  text-align: left;
+ box-shadow: 0px 0.1px 2px 2px gray;
+ text-shadow:1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0),
+              -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0),
+              0px 1px 0 rgb(0, 0, 0),  0-1px 0 rgb(0, 0, 0),
+              -1px 0 0 rgb(0, 0, 0), 1px 0 0 rgb(0, 0, 0);
+ }
+ .text{
+  color:rgb(58, 28, 5);
+  font-size:24px;
+  border-bottom:dotted;
+  border-top:dotted;
+ background-color: rgb(213, 207, 99);
+ }
+ .midashi{
+  padding-left: 3%;
+ }
+ .text-area{
+  margin-top: 25px;
+  position: relative;
+  text-align: left;
+  animation:fadeIn 4s;
+  margin-left: 10%;
+  margin-right:10%;
+ }
+ .text2{
+  margin-top: 10px;;
+ }
+ footer{
+  margin-top:50px;
+  height: 60px;
+  background-color: rgb(238, 238, 238);
+  padding-top:30px ;
+  padding-bottom: 20px;
+  box-shadow: 0px -0.1px 2px 0.5px gray;
+ }
+ .foot{
+  color: rgb(0, 0, 0);
+  font-size:7px;
+  margin-left: 2%;
+ }
+ @keyframes fadeIn{
+  0%{opacity: 0;}
+  100%{opacity: 100;}
+ }
+ .list{
+  color: rgb(11, 0, 53);
+  font-weight: bold;
+  text-decoration: none;
+  font-size:20px;
+}
+  li:hover{
+    background-color: rgb(118, 29, 9);
+  }
+  .list:hover{
+    color:#fff;
+  }
+  .segment{
+    border-top: dotted 1px rgb(0, 0, 0);
+    border-spacing: 10px;
+  }
+  .finally-segment{
+    border-top: dotted 1px black;
+    border-bottom: dotted 1px black;
+  }
+  ul{
+    list-style: none;
+  }
+  .hyou1{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .zu1{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .engai{
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .aka{
+    color: red;
+  }
+  .engai2{
+    margin-bottom: 10px;
+  }
+  .blue{
+    color: blue;
+  }
+  .underlinered{
+    border-bottom: 1px solid rgb(255, 0, 0);
+  }
+  .sansho{
+    font-size: 12px;
+  }
+ </style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script>
+  </script>
+ <header class="header">
+  <div class="inner">
+   <div class="header_main">
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+     <h1 class="logo">
+      <a href="#">
+       プロジェクトスタディーズ
+      </a>
+     </h1>
+    </div>
+    <span class="nav_toggle">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+    <nav class="nav">
+      <ul class="nav_menu_ul">
+        <li class="nav_menu_li"><a class="list" href="index.html"><div class="segment">地震について</div></a></li>
+        <li class="nav_menu_li"> <a class="list"href="tatemono.html"><div class="segment">建物</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="infla.html"><div class="segment">インフラ</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="keizai.html"><div class="segment">経済</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="hukkou.html"><div class="segment">復興</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="tsunami.html"><div class="segment">津波</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="koutu.html"><div class="finally-segment">交通</div></a></li>
+      </ul>
+    </nav>    
+   <script>
+    $(".nav_toggle").on("click",function () {
+    $(".nav_toggle, .nav").toggleClass("show");
+  });
+   </script>
+  </div>
+ </header>
+ <div class="text-area">
+  <h1 class="text">
+    <span class="midashi">
+    地震について
+  </span>
+    </h1>
+    <p class="text2">
+      <div class="engai2">日本は地震大国であり、地震の発生率は世界でも有数である。そんな中で、どのような対策を取るにしても、まずは、地震についての理解を深めることが先決であろう。
+      まず、地震とはどのようにして発生するのだろうか。
+      </div>
+      <h1>地震のメカニズム</h1>
+      <div class="engai2">地球の表面は、10~200㎞のプレートで覆われている。海のプレートは年間数cmの速さで陸のプレートに押し寄せる。海のプレートは陸のプレートよりも重く、陸のプレートのしたに入り込み、この圧力によって、ひずみがたまる。これが限界に達すると、亀裂が入るなどして、大きく動いたりする。これが地震である。
+      </div>
+        <div class="sansho">参照[1]https://www.bousai.go.jp/kohou/kouhoubousai/h21/05/special_02.html#:~:text=%E4%BB%8A%E3%82%82%E5%8B%95%E3%81%8D%E7%B6%9A%E3%81%91%E3%81%A6%E3%81%84%E3%82%8B%E5%9C%B0%E7%90%83%E3%81%AE%E8%A1%A8%E9%9D%A2&text=%E6%B5%B7%E3%81%AE%E4%B8%8B%E3%81%A7%E3%81%AF%E6%96%B0%E3%81%97%E3%81%84,%E3%81%93%E3%82%8C%E3%81%8C%E5%9C%B0%E9%9C%87%E3%81%AA%E3%81%AE%E3%81%A7%E3%81%99%E3%80%82
+      </div>
+        <h1>阪神淡路大震災</h1>
+        <div class="engai2">戦後最初の大震災である、阪神淡路大震災は1995年1月17日に起こった淡路島北部を震源地とする地震であり、国内での観測史上初となる震度7を観測した。住宅被害は約64万棟にもおよび、6434人が犠牲になった。亡くなった方の一番多かった原因として挙げられるのが、倒壊した建物や家具の下敷きになってしまったこと。また、地震が発生したのが早朝だったこともあり、避難がスムーズに行えず、被害が拡大した。これをきっかけに建築基準法が見直され、住宅の耐震化が義務付けられ、耐震に対する考えが大きく変わった。
+        </div>
+          <div class="sansho">参照[2]  https://www.bousai.go.jp/kyoiku/kyokun/hanshin_awaji/earthquake/index.html
+      </div>
+        <h1>東日本大震災</h1>
+        <div class="engai2">東日本大震災は2011年3月11日に起こった三陸沖を震源地とする地震であり、こちらも阪神淡路大震災と同じ震度7を観測した。また、マグニチュードは国内での観測史上初となる9.0を観測し、1900年以降4番目に大きい規模の地震だった。住宅の耐震化が進んでいることもあり、建物が倒壊するといった被害は多くなかった。また、震源地から遠い千葉、埼玉などの内陸部でも液状化現象による住宅の傾き、道路の破損などの被害が多発した。この未曽有の津波によって、多くの死者や行方不明を出した。現在も避難生活を送っている人は多々おり、まだ被害の後が色濃い災害である。
+        </div>
+          <div class="sansho">参照[3]https://www.bousai.go.jp/kohou/kouhoubousai/h23/63/special_01.html
+      </div>
+        <h1>熊本地震</h1>
+        <div class="engai2">2016年4月14日、熊本県熊本地方を震源地とする巨大地震である。この地震は今までの地震とは違い最大震度7相当の前震が襲い、その2日後に再び最大震度7相当の本震がやってきた。わずか2日の間に震度7の揺れが2度も発生し、このことは誰も想定していなかった。そのため、新耐震基準、耐震等級3で建てられ安心とされていた建物も次々と倒壊してしまった。また、倒壊まではしなかったものの一部の病院や学校に建物の損壊が確認され、一時期使用ができなくなった。熊本城の石垣の一部崩壊がニュースで取り上げられたことは記憶に新しい。
+        </div>
+          <div class="sansho">参照 [4] https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_01.html
+       </div>
+      </p>
+    <h2>参考文献</h2>
+    [1]特集1　平成28年熊本地震‐内閣府防災情報のページ : 防災情報のページ  内閣府 https://www.bousai.go.jp/kohou/kouhoubousai/h21/05/special_02.html#:~:text=%E4%BB%8A%E3%82%82%E5%8B%95%E3%81%8D%E7%B6%9A%E3%81%91%E3%81%A6%E3%81%84%E3%82%8B%E5%9C%B0%E7%90%83%E3%81%AE%E8%A1%A8%E9%9D%A2&text=%E6%B5%B7%E3%81%AE%E4%B8%8B%E3%81%A7%E3%81%AF%E6%96%B0%E3%81%97%E3%81%84,%E3%81%93%E3%82%8C%E3%81%8C%E5%9C%B0%E9%9C%87%E3%81%AA%E3%81%AE%E3%81%A7%E3%81%99%E3%80%82
+    <br>[2]特集　地震を知って地震に備える！防災情報  内閣府 https://www.bousai.go.jp/kyoiku/kyokun/hanshin_awaji/earthquake/index.html
+    <br>[3]阪神・淡路大震災教訓情報資料集阪神・淡路大震災の概要 : 防災情報のページ  内閣府 https://www.bousai.go.jp/kohou/kouhoubousai/h23/63/special_01.html
+    <br>[4]特集　東日本大震災 : 防災情報のページ  内閣府 https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_01.html
+    </p>
+ </div>
+ <footer>
+  <div class="foot">
+   <p>代表者の連絡先：e2259105@soka-u.jp</p>
+   </div>
+</footer>
+</body>
+</html>

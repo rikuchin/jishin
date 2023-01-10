@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+ content="width=device-width,
+ initial-scale=1.0">
+ <meta name="decription"
+ content="地震によって起こる津波、塩害、交通の被害とは？ 
+ いずれ発生する南海トラフや首都直下地震の対策 いまからできること 
+ 各自治体の実施事例を紹介">
+ <link rel="stylesheet" href="地震">
+ <title>プロジェクトスタディ　地震</title>
+ <style>
+ *{
+  margin: 0; padding: 0;
+ }
+ a{
+  color: rgba(255, 197, 139, 0.752);
+  font-weight: bold;
+  text-decoration: none;
+ }
+ .nav_toggle {
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.5rem;;
+}
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #333;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+.nav_toggle i:nth-child(1) {
+  top: -245%;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(2) {
+  top: -210%;
+  bottom: 0;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(3) {
+  top: -175%;
+  bottom: px;
+  margin:auto;
+  margin-left:100%;
+}
+.nav {
+  position: fixed;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+ background-color: rgb(255, 255, 255);
+ z-index: 2;
+ width:100%
+}
+.nav.show {
+  opacity: 1;
+  visibility: visible;}
+ .inner{
+  height: 100px;
+  width: 100%;
+  align-items: center;
+ }
+ .logo{
+  line-height: 100px;
+  font-family: "kokoro";
+  white-space: nowrap;
+  font-size: 20px;
+  padding-left: 80px;
+  text-align: left;
+ box-shadow: 0px 0.1px 2px 2px gray;
+ text-shadow:1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0),
+              -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0),
+              0px 1px 0 rgb(0, 0, 0),  0-1px 0 rgb(0, 0, 0),
+              -1px 0 0 rgb(0, 0, 0), 1px 0 0 rgb(0, 0, 0);
+ }
+ .text{
+  color:rgb(58, 28, 5);
+  font-size:24px;
+  border-bottom:dotted;
+  border-top:dotted;
+ background-color: rgb(213, 207, 99);
+ }
+ .midashi{
+  padding-left: 3%;
+ }
+ .text-area{
+  margin-top: 25px;
+  position: relative;
+  text-align: left;
+  animation:fadeIn 4s;
+  margin-left: 10%;
+  margin-right:10%;
+ }
+ .text2{
+  margin-top: 10px;;
+ }
+ footer{
+  margin-top:50px;
+  height: 60px;
+  background-color: rgb(238, 238, 238);
+  padding-top:30px ;
+  padding-bottom: 20px;
+  box-shadow: 0px -0.1px 2px 0.5px gray;
+ }
+ .foot{
+  color: rgb(0, 0, 0);
+  font-size:7px;
+  margin-left: 2%;
+ }
+ @keyframes fadeIn{
+  0%{opacity: 0;}
+  100%{opacity: 100;}
+ }
+ .list{
+  color: rgb(11, 0, 53);
+  font-weight: bold;
+  text-decoration: none;
+  font-size:20px;
+}
+  li:hover{
+    background-color: rgb(118, 29, 9);
+  }
+  .list:hover{
+    color:#fff;
+  }
+  .segment{
+    border-top: dotted 1px rgb(0, 0, 0);
+    border-spacing: 10px;
+  }
+  .finally-segment{
+    border-top: dotted 1px black;
+    border-bottom: dotted 1px black;
+  }
+  ul{
+    list-style: none;
+  }
+  .sansho{
+    font-size: 12px;
+  }
+  .engai2{
+    margin-bottom: 10px;
+  }
+  .engai{
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .hyou1{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .zu1{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .ueakeyo{
+    margin-top: 10px;
+  }
+ </style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script>
+  </script>
+ <header class="header">
+  <div class="inner">
+   <div class="header_main">
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+     <h1 class="logo">
+      <a href="#">
+       プロジェクトスタディーズ
+      </a>
+     </h1>
+    </div>
+    <span class="nav_toggle">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+    <nav class="nav">
+      <ul class="nav_menu_ul">
+        <li class="nav_menu_li"><a class="list" href="index.html"><div class="segment">地震について</div></a></li>
+        <li class="nav_menu_li"> <a class="list"href="tatemono.html"><div class="segment">建物</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="infla.html"><div class="segment">インフラ</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="keizai.html"><div class="segment">経済</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="hukkou.html"><div class="segment">復興</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="tsunami.html"><div class="segment">津波</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="koutu.html"><div class="finally-segment">交通</div></a></li>
+      </ul>
+    </nav>    
+   <script>
+    $(".nav_toggle").on("click",function () {
+    $(".nav_toggle, .nav").toggleClass("show");
+  });
+   </script>
+  </div>
+ </header>
+ <div class="text-area">
+  <h1 class="text">
+    <span class="midashi">
+    建物
+  </span>
+    </h1>
+    <p class="text2">
+      <div class="ueakeyo"><h1>地震による建物の被害</h1></div>
+      <div class="engai2">日本ではこれまでに多数の大地震が発生しており、その影響で、屋根瓦の被害、外装材の被害、老朽化による被害、バランスの悪さで起こる被害、傾斜地での被害、基礎の被害、建物内部の被害など、数多くの建物被害が生じている。
+       </div>
+        <div class="sansho">
+          <div class="engai2">参照[1]https://www.aij.or.jp/jpn/seismj/wood/wood-1.htm
+            </div>
+      </div>
+      <div class="engai2">1995年に発生した阪神淡路大震災、2011年の東日本大震災では多くの建物が倒壊し、たくさんの命が奪われた。
+      地震による建物被害で恐ろしいのは、揺れ方により、建物自体が倒れたり、室内で家具や電気製品が転倒・落下することである。また、地震によって火災が発生し、住宅密集地では消火活動が遅れ、多大な二次被害が発生してしまう場合もある。
+      </div>
+      <div class="sansho">参照[2]https://www.daiken.jp/building-materials/earthquakeresistance/fear.html#:~:text=%E5%9C%B0%E9%9C%87%E3%81%AB%E3%82%88%E3%82%8B%E8%A2%AB%E5%AE%B3%E3%81%A7,%E4%B8%8B%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A7%E3%81%99%E3%80%82
+      </div>
+      <div class="ueakeyo"><h1>地震による建物被害の種類</h1></div>
+        <div class="engai">◎	建物の倒壊</div>
+        <div class="engai2">地震によって1階部分が崩れてしまったり、傾いてしまったりといった被害が多い。
+      地震の周期とお木造住宅固有の周期が合致してしまった場合、共振現象が発生して倒壊してしまう。阪神・淡路大震災では、犠牲者の約8割が建物の倒壊が原因で亡くなっている。
+         </div>
+         <div class="hyou1"><img src="tatemono1.jpg"></div>
+         <div class="zu1">図1「阪神・淡路大震災　犠牲者の死因」</div>
+         <div class="sansho">引用[2]https://www.daiken.jp/building-materials/earthquakeresistance/fear.html</div>
+      <div class="engai">◎	建物の火災</div>
+      <div class="engai2">火元を消せなかったり、ガス管が破裂してしまっていたりといったことが原因で、木造住宅は、火災が発生しやすい。火が燃え移る「もらい火」やほかに燃え移る「延焼」によって大火災が発生する。家庭内の火元を消せなかったり、ガス管の破断といった不作為の状況によって、更に火災が発生しやすく被害が大きくなる。
+      </div>
+        <div class="engai">◎	内装の損壊</div>
+        <div class="engai2">建物が倒壊しない場合でも、内装の損壊が多い場合がある。例えば、棚の中のガラス製品が地震の揺れによって割れてしまうこともある。ガラスが飛び散ることで怪我をする危険性が高い。建物が無事でも、家具や電気製品の転倒、ガラスの飛散などは大きな被害につながる。
+        </div>
+          <div class="sansho">参照[3]https://www.kantei.go.jp/jp/headline/bousai/jishin.html
+      </div>
+      <div class="ueakeyo"><h1>地震による建物被害の対策</h1></div>
+        <div class="engai2">まず、建物による建物倒壊は、どんなに対策をしても100％防げるものではない。
+      地震には揺れの種類があるため、揺れの種類によってどのような対策をするかが重要である。
+        </div>
+      <div class="engai">◎倒壊被害の対策</div>
+      <div class="engai2">地震での建物の倒壊を防ぐ対策で最も重要度の高いことは建物の耐震性を強化することである。強度を確かめるために耐震診断を受け、建物のどの部分の耐震性が低いかを診断し、工事が必要な個所を知ることが大切である。柱と柱のつなぎ目を強化したり、柔軟性を高めたり、壁が劣化している場合は、壁を変えるか、補強ボードを取り付けて耐震性を高めていくことが大切である。
+      </div>
+        <div class="sansho">参照[4]https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_fr_000043.html
+      </div>
+      <div class="engai">◎火災への対策</div>
+      <div class="engai2">地震による火災の被害の原因は、「電化製品の破損または誤作動」が全体の51％を占めている。そのため、ブレーカーを落としたり、コンセントを抜いたり、火を止めるなどの、「電化製品の破損または誤作動」への対策が、地震による火災の被害を防ぐのに最も効果的な対策である。
+      </div>
+        <div class="sansho">参照[5]https://www.soumu.go.jp/menu_kyotsuu/important/103794_05.html
+      </div>
+      <div class="engai">◎	内装被害への対策</div>
+      <div class="engai2">内装被害で恐ろしいことはガラスの飛散などの被害である。この被害を防ぐためには、飛散防止フィルムを貼ったり、地震に強いガラスに交換したり、窓にカーテンをかけるなどの対策が効果的である。また、家具や電化製品の転倒には、家具の配置を見直したり、家具転倒防止グッズを使って家具を固定するなどの対策も効果的である。
+      </div>
+        <div class="sansho">
+          <div class="engai2">参照[6]https://www.fdma.go.jp/publication/database/kagu/post1.html
+          </div>
+        </div>
+        <h2>参考文献</h2>
+     [1]地震による建物の被害 日本建築学会 (https://www.aij.or.jp/jpn/seismj/wood/wood-1.htm)
+     <br>[2]地震による建物への影響 DAIKENー大建工業 https://www.daiken.jp/building-materials/earthquakeresistance/fear.html#:~:text=%E5%9C%B0%E9%9C%87%E3%81%AB%E3%82%88%E3%82%8B%E8%A2%AB%E5%AE%B3%E3%81%A7,%E4%B8%8B%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A7%E3%81%99%E3%80%82
+     <br>[3]地震では、どのような災害が起こるのか 首相官邸ホームページ https://www.kantei.go.jp/jp/headline/bousai/jishin.html
+     <br> [4]建築：住宅・建築物の耐震化について 国土交通省 https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_fr_000043.html
+     <br> [5]地震後の火災防止について（注意喚起）総務省 https://www.soumu.go.jp/menu_kyotsuu/important/103794_05.html
+     <br>[6]地震による家具の転倒を防ぐには 総務省消防庁 https://www.fdma.go.jp/publication/database/kagu/post1.html
+      </p>
+ </div>
+ <footer>
+  <div class="foot">
+   <p>代表者の連絡先：e2259105@soka-u.jp</p>
+   </div>
+</footer>
+</body>
+</html>

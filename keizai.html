@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+ content="width=device-width,
+ initial-scale=1.0">
+ <meta name="decription"
+ content="地震によって起こる津波、塩害、交通の被害とは？ 
+ いずれ発生する南海トラフや首都直下地震の対策 いまからできること 
+ 各自治体の実施事例を紹介">
+ <link rel="stylesheet" href="地震">
+ <title>プロジェクトスタディ　地震</title>
+ <style>
+ *{
+  margin: 0; padding: 0;
+ }
+ a{
+  color: rgba(255, 197, 139, 0.752);
+  font-weight: bold;
+  text-decoration: none;
+ }
+ .nav_toggle {
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.5rem;;
+}
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #333;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+.nav_toggle i:nth-child(1) {
+  top: -245%;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(2) {
+  top: -210%;
+  bottom: 0;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(3) {
+  top: -175%;
+  bottom: px;
+  margin:auto;
+  margin-left:100%;
+}
+.nav {
+  position: fixed;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+ background-color: rgb(255, 255, 255);
+ z-index: 2;
+ width:100%
+}
+.nav.show {
+  opacity: 1;
+  visibility: visible;}
+ .inner{
+  height: 100px;
+  width: 100%;
+  align-items: center;
+ }
+ .logo{
+  line-height: 100px;
+  font-family: "kokoro";
+  white-space: nowrap;
+  font-size: 20px;
+  padding-left: 80px;
+  text-align: left;
+ box-shadow: 0px 0.1px 2px 2px gray;
+ text-shadow:1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0),
+              -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0),
+              0px 1px 0 rgb(0, 0, 0),  0-1px 0 rgb(0, 0, 0),
+              -1px 0 0 rgb(0, 0, 0), 1px 0 0 rgb(0, 0, 0);
+ }
+ .text{
+  color:rgb(58, 28, 5);
+  font-size:24px;
+  border-bottom:dotted;
+  border-top:dotted;
+ background-color: rgb(213, 207, 99);
+ }
+ .midashi{
+  padding-left: 3%;
+ }
+ .text-area{
+  margin-top: 25px;
+  position: relative;
+  text-align: left;
+  animation:fadeIn 4s;
+  margin-left: 10%;
+  margin-right:10%;
+ }
+ .text2{
+  margin-top: 10px;;
+ }
+ footer{
+  margin-top:50px;
+  height: 60px;
+  background-color: rgb(238, 238, 238);
+  padding-top:30px ;
+  padding-bottom: 20px;
+  box-shadow: 0px -0.1px 2px 0.5px gray;
+ }
+ .foot{
+  color: rgb(0, 0, 0);
+  font-size:7px;
+  margin-left: 2%;
+ }
+ @keyframes fadeIn{
+  0%{opacity: 0;}
+  100%{opacity: 100;}
+ }
+ .list{
+  color: rgb(11, 0, 53);
+  font-weight: bold;
+  text-decoration: none;
+  font-size:20px;
+}
+  li:hover{
+    background-color: rgb(118, 29, 9);
+  }
+  .list:hover{
+    color:#fff;
+  }
+  .segment{
+    border-top: dotted 1px rgb(0, 0, 0);
+    border-spacing: 10px;
+  }
+  .finally-segment{
+    border-top: dotted 1px black;
+    border-bottom: dotted 1px black;
+  }
+  ul{
+    list-style: none;
+  }
+  .keizaihyou1{
+    text-align: center;
+  }
+  .hyou1{
+    text-align: center;
+  }
+  .bikou{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .eikyou{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .higashinihon{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .hanshinawaji{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+ .hyou2{
+  margin-top: 10px;
+  text-align: center;
+ }
+ .keizaihyou2{
+  margin-bottom: 10px;
+  text-align: center;
+ }
+ .engai{
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+ </style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script>
+  </script>
+ <header class="header">
+  <div class="inner">
+   <div class="header_main">
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+     <h1 class="logo">
+      <a href="#">
+       プロジェクトスタディーズ
+      </a>
+     </h1>
+    </div>
+    <span class="nav_toggle">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+    <nav class="nav">
+      <ul class="nav_menu_ul">
+        <li class="nav_menu_li"><a class="list" href="index.html"><div class="segment">地震について</div></a></li>
+        <li class="nav_menu_li"> <a class="list"href="tatemono.html"><div class="segment">建物</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="infla.html"><div class="segment">インフラ</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="keizai.html"><div class="segment">経済</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="hukkou.html"><div class="segment">復興</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="tsunami.html"><div class="segment">津波</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="koutu.html"><div class="finally-segment">交通</div></a></li>
+      </ul>
+    </nav>    
+   <script>
+    $(".nav_toggle").on("click",function () {
+    $(".nav_toggle, .nav").toggleClass("show");
+  });
+   </script>
+  </div>
+ </header>
+ <div class="text-area">
+  <h1 class="text">
+    <span class="midashi">
+    経済
+  </span>
+    </h1>
+    <p class="text2">
+     <h1> 地震による経済への影響</h1>
+      地震による被害額
+      地震による経済的被害は甚大なものであった。社会インフラ等経済ストック(社会資本・住宅・民間企業設備)の被害額について、東日本大震災による推計被害額は約16.9兆円に上り、阪神・淡路大震災においても約9.6兆円に達している。ストック被害の内訳をみると、特に建築物等や社会基盤施設の被害額大きかったことがうかがえる。
+      <br><div class="hyou1">表1「資本ストック被害額推計」</div>
+      <div class=keizaihyou1><img src="keizai1.jpg" alt="経済1" title="表1　資本ストック被害額推計"></div>
+    <div class="bikou">
+      <div class="engai">◎備考
+      </div>
+1.ケース１の建築物の損壊率の想定については津波被災地域を阪神・淡路大震災の２倍程度とし、非津波被災地域を阪神・淡路大震災と同程度とした。
+<br>2.ケース２の建築物の損壊率の想定については津波被災地域をケース１より大きいものとし、非津波被災地域を阪神・淡路大震災と同程度とした。
+</div>
+<div class="eikyou">
+  <div class="engai">◎地震による経済的影響
+  </div>
+   地震による経済的影響の特徴として、被害が大規模であるだけでなく、様々な経路を通じて被災地以外の広範囲の地域に経済的影響を及ぼす。
+</div>
+<div class="higashinihon"><h1>東日本大震災</h1>
+ 原子力発電所が被害を受け、東日本の広範囲にわたり、電力供給が低下した。
+この震災ではマグニチュード9.0という巨大な地震による被害に加えて、地震によって引き起こされた大規模な津波により被害が広範囲にまで及んだ。その際に原子力発電所が被害を受けたことにより、被災地のみならず東日本の広範囲にわたり、電力供給能力が大きく低下した。こうした電力供給制約によって、従来のような家計や企業の電力需要を賄えない状態が続いており、経済活動の低下をもたらす要因となった。
+また、近年における企業の立地や在庫管理の最適化等を背景に、部品供給が細分化して相互依存を高めたことから、被災地域に立地する工場が停止して特定の部品の供給が滞ることにより、日本全国、一部海外の工場が操業停止に追い込まれる現象が起こった。こうしたサプライチェーンの寸断に伴う全国的な生産活動の低下が生じたことも、経済的影響につながった。
+</div>
+<div class="hanshinawaji"><h1>阪神・淡路大震災</h1>
+ 工場等の施設設備が損壊したことにより、製造業に影響を及ぼした。
+被害が甚大かつ広範囲なものであり、工場の施設設備が被害を受けたことで経済活動に大きな影響を及ぼした。被災地域の経済活動は、生産面において、工場等の施設設備の損壊等により操業停止を行われ、兵庫県では鉱工業生産は大幅に低下するなど経済的影響は大きかった。また、神戸港をはじめ、阪神高速道路、鉄道等の輸送施設が被害を受けたため、国内の物流のみならず輸出、輸入産業資材にも深刻な影響を与えた。
+被災地以外の地域でも、生産面では、震災直後に被災地域から部品供給の停止、物流に混乱が起こったことにより、一部の製造業で生産調整が行われた。交通規制に伴う渋滞や迂回による輸送時間が大幅に増え、物流面に影響が出たため生鮮食料品の輸送停止、工場の操業停止がみられた。
+</div>
+<div class="hyou2"><img src="keizai2.jpg"></div>
+<div class="keizaihyou2">図2「鉱業生産指数」</div>
+      <h2>参考文献</h2>
+      [1]内閣府　地域の経済2011
+         https://www5.cao.go.jp/j-j/cr/cr11/chr11_index.html
+     <br> [2]国土交通省　参考資料1　阪神・淡路大震災からの復興と東日本大震災
+       https://www.mlit.go.jp/hakusyo/mlit/h23/hakusho/h24/html/n11s0000.html
+      
+      </p>
+ </div>
+ <footer>
+   <div class="foot">
+    <p>代表者の連絡先：e2259105@soka-u.jp</p>
+    </div>
+ </footer>
+</body>
+</html>

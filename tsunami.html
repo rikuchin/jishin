@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+ content="width=device-width,
+ initial-scale=1.0">
+ <meta name="decription"
+ content="地震によって起こる津波、塩害、交通の被害とは？ 
+ いずれ発生する南海トラフや首都直下地震の対策 いまからできること 
+ 各自治体の実施事例を紹介">
+ <link rel="stylesheet" href="地震">
+ <title>プロジェクトスタディ　地震</title>
+ <style>
+ *{
+  margin: 0; padding: 0;
+ }
+ a{
+  color: rgba(255, 197, 139, 0.752);
+  font-weight: bold;
+  text-decoration: none;
+ }
+ .nav_toggle {
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.5rem;;
+}
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #333;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+.nav_toggle i:nth-child(1) {
+  top: -245%;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(2) {
+  top: -210%;
+  bottom: 0;
+  margin-left:100%;
+}
+.nav_toggle i:nth-child(3) {
+  top: -175%;
+  bottom: px;
+  margin:auto;
+  margin-left:100%;
+}
+.nav {
+  position: fixed;
+  top: 15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+ background-color: rgb(255, 255, 255);
+ z-index: 2;
+ width:100%
+}
+.nav.show {
+  opacity: 1;
+  visibility: visible;}
+ .inner{
+  height: 100px;
+  width: 100%;
+  align-items: center;
+ }
+ .logo{
+  line-height: 100px;
+  font-family: "kokoro";
+  white-space: nowrap;
+  font-size: 20px;
+  padding-left: 80px;
+  text-align: left;
+ box-shadow: 0px 0.1px 2px 2px gray;
+ text-shadow:1px 1px 0 rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0),
+              -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0),
+              0px 1px 0 rgb(0, 0, 0),  0-1px 0 rgb(0, 0, 0),
+              -1px 0 0 rgb(0, 0, 0), 1px 0 0 rgb(0, 0, 0);
+ }
+ .text{
+  color:rgb(58, 28, 5);
+  font-size:24px;
+  border-bottom:dotted;
+  border-top:dotted;
+ background-color: rgb(213, 207, 99);
+ }
+ .midashi{
+  padding-left: 3%;
+ }
+ .text-area{
+  margin-top: 25px;
+  position: relative;
+  text-align: left;
+  animation:fadeIn 4s;
+  margin-left: 10%;
+  margin-right:10%;
+ }
+ .text2{
+  margin-top: 10px;;
+ }
+ footer{
+  margin-top:50px;
+  height: 60px;
+  background-color: rgb(238, 238, 238);
+  padding-top:30px ;
+  padding-bottom: 20px;
+  box-shadow: 0px -0.1px 2px 0.5px gray;
+ }
+ .foot{
+  color: rgb(0, 0, 0);
+  font-size:7px;
+  margin-left: 2%;
+ }
+ @keyframes fadeIn{
+  0%{opacity: 0;}
+  100%{opacity: 100;}
+ }
+ .list{
+  color: rgb(11, 0, 53);
+  font-weight: bold;
+  text-decoration: none;
+  font-size:20px;
+}
+  li:hover{
+    background-color: rgb(118, 29, 9);
+  }
+  .list:hover{
+    color:#fff;
+  }
+  .segment{
+    border-top: dotted 1px rgb(0, 0, 0);
+    border-spacing: 10px;
+  }
+  .finally-segment{
+    border-top: dotted 1px black;
+    border-bottom: dotted 1px black;
+  }
+  ul{
+    list-style: none;
+  }
+  .hyou1{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .zu1{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .engai{
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .aka{
+    color: red;
+  }
+  .engai2{
+    margin-bottom: 10px;
+  }
+  .blue{
+    color: blue;
+  }
+  .underlinered{
+    border-bottom: 1px solid rgb(255, 0, 0);
+  }
+  .sansho{
+    font-size: 12px;
+  }
+ </style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script>
+  </script>
+ <header class="header">
+  <div class="inner">
+   <div class="header_main">
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+     <h1 class="logo">
+      <a href="#">
+       プロジェクトスタディーズ
+      </a>
+     </h1>
+    </div>
+    <span class="nav_toggle">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+    <nav class="nav">
+      <ul class="nav_menu_ul">
+        <li class="nav_menu_li"><a class="list" href="index.html"><div class="segment">地震について</div></a></li>
+        <li class="nav_menu_li"> <a class="list"href="tatemono.html"><div class="segment">建物</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="infla.html"><div class="segment">インフラ</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="keizai.html"><div class="segment">経済</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="hukkou.html"><div class="segment">復興</div></a></li>
+        <li class="nav_menu_li"><a class="list" href="tsunami.html"><div class="segment">津波</div></a></li>
+        <li class="nav_menu_li"><a class="list"href="koutu.html"><div class="finally-segment">交通</div></a></li>
+      </ul>
+    </nav>    
+   <script>
+    $(".nav_toggle").on("click",function () {
+    $(".nav_toggle, .nav").toggleClass("show");
+  });
+   </script>
+  </div>
+ </header>
+ <div class="text-area">
+  <h1 class="text">
+    <span class="midashi">
+    津波～地震における津波の被害～
+  </span>
+    </h1>
+    <p class="text2">
+    <h1>　塩害</h1>
+津波によって覆われた建物や農地などが海水の塩分によって浸透してしまう「塩害」を取り上げます。
+東日本大震災では想定外の津波が発生し、沿岸部に甚大な冠水とそれと伴う塩害被害が報告されています。特に東北地方では津波により農地が冠水し、塩害で稲作ができなくなり、水田の被害面積は約20,000haにも及びました。
+塩害被害をうけた汚泥のほとんどは海から運ばれたてきたもので、海水が土壌中に侵入すると土壌の単粒化や硬直化が高まり浸水性が低下していきます。また、排水不良による作物の根腐れが発生し、稲作に大きな被害をもたすのです。　
+<div class="hyou1"><img src="tsunami1.jpg"></div>
+<div class="zu1">図1　塩害被害を受けた農地</div>
+<div class="sansho">引用　［1］農地の塩害と除塩 農村振興局  (maff.go.jp)
+</div>
+  <div class="engai"><b>〈塩害の仕組み〉</b></div>
+塩害の仕組みは主に３つ考えられています。
+<br>１．浸透圧による問題
+<div class="engai2">　塩化ナトリウムが多量に発生することにより、<span class="aka">浸透圧</span>が高くなります。
+高まると植物の根を阻害することになります。
+<br>　<span class="aka">浸透圧</span>とは：濃度の低いほうから高いほうへと移動するこの水を引っ張る力を言います。
+</div>
+２．ナトリウムイオンによる整理障害
+<div class="engai2">　ナトリウムイオンが高濃度で存在すると、植物細胞のイオン濃度も上昇して酵素反応を抑制してしまいます。
+</div>
+３．ナトリウムイオンによる土壌構造への影響
+<div class="engai2">　土壌中のナトリウムイオン濃度が高いと土壌粘土鉱物は分散しやすくなり、
+  <span class="aka">団粒構造</span>が破壊されます。
+  <br><span class="aka">団粒構造</span>とは：土壌粒子が小さな集合体を形成している構造を言います。
+</div>
+<div class="engai2">
+  <div class="sansho">参照［2］TOHO LEO (2019) 津波により冠水した水田の塩害・除塩対策技術 | グリーンインフラの東邦レオ (greeninfrastructure.jp)
+  ［3］団粒構造とは？植物が良く育つ土壌に必要な要素と土の作り方 (100nen-kankyo.jp)
+  </div>
+</div>
+<div class="engai"><b>〈塩害を受けた農地を復旧するために〉</b></div>
+塩害によって使い物にならなくなった農地は除塩という措置をとって復旧することができます。被害を受けた農地を純水で洗い流すイメージが多いと考えますがそれはとても効率の悪く、実際は化学的な根拠による除塩作業があったのです。
+塩素とナトリウムが化合してできる塩化ナトリウムによって塩分は発生します。除塩に最も効果的なのは石灰に含まれている<span class="aka">カルシウム</span>です。土壌中のナトリウムにカルシウムが結合することで塩化ナトリウムを除去できる化学反応が起きるのです。今では除塩に効果のある土壌改良され販売しているものにはほとんどカルシウムが含まれているのです。
+<div class="hyou1"><img src="tsunami2.jpg"></div>
+<div class="zu1">図2　除塩に関するメカニズム</div>
+<div class="engai2">
+  <div class="sansho">
+  引用<br>［1］農地の塩害と除塩 農村振興局  (maff.go.jp)
+  <br>［4］農地で塩害が発生するメカニズムと除塩の有効性,具体的な方法 (kaku-ichi.co.jp)
+</div>
+</div>
+<h1>　人的被害</h1>
+津波が発生した際に起こった溺死などによる<b>人的被害</b>について取り上げます。
+東日本大震災では、死者・行方不明者ともに12都道府県でおこり、死者が1万5,859人、行方不明者3,021人とされています。（平成24年5月30日警察庁発表）
+図3のように東日本大震災における死因の割合は約9割が津波の被害に及んだといいます。
+<div class="hyou1"><img src="tsunami3.jpg"></div>
+<div class="zu1">図3　東日本大震災による死因</div>
+<div class="sansho">引用 ［5］防災情報のページ - 内閣府 (bousai.go.jp)
+</div>
+  <div class="engai"><b>〈津波が襲来したときの行動〉</b></div>
+<div class="engai2">このような状況から少しでも人的被害を抑えるために<span class="underlinered">一人一人の危機的意識</span>が必要となります。まず、津波が迫っていることが分かったら必ず避難することを意識し、避難するときは<span class="aka">徒歩</span>で避難します。避難場所として高台に逃げることが鉄則ですが具体的には<span class="aka">3階以上</span>の場所が望ましいとされています。逆に避難してはいけない場所として津波の水圧で倒壊しやすい<span class="blue">木造の建物</span>や、<span class="blue">河川に近い場所</span>があげられます。このように津波が来た時、自分のいる場所から避難できる場所までを冷静に判断し、適した選択をすることが求められています。
+</div>
+<div class="engai2">
+  <div class="sansho">参照　［6］避難場所マップ・防災対策 (dk-kurashi.com)
+  </div>
+  </div>
+  <h1>津波火災</h1>
+  <div class="engai2">生活に必要とするガスボンベや自動車などの可燃物が漂流物の衝突などによって発生する<b>津波火災</b>について取り上げます。
+東日本大震災では津波浸水が極めて深刻なこともあり、関東大震災や阪神淡路大震災を超える373件の出火件数が報告されました。この中の出火件数は全体の4割を占めているものの大規模な火災としては津波火災によるものであったといいます。
+</div>
+<div class="engai2">
+  <div class="sansho">
+  引用［7］津波火災現象の解明とその対策 | 地震本部 (jishin.go.jp)
+ </div>
+</div>
+<div class="engai2">深刻な被害を及ぼした東日本大震災における津波火災から4種類の発生パターンに分けられることが判明しました。
+</div>
+<div class="engai"><b>〈4種類の津波火災〉</b>
+  </div>
+  <div class="engai">◎斜面瓦礫集積型の火災
+  </div>
+倒壊家屋や自動車、ガスボンベなど多くの可燃物が森林などの火災の燃料となるものに打ち寄せられます。そこで漂流してきた火の元が燃え移り、津波火災へとつながります。
+<div class="engai">◎都市近郊平野部型の火災
+</div>
+都市部の津波火災は膨大な量のガスボンベや車などが多くの出火点をもたらします。
+津波避難ビルなどの生存空間を脅かすもので、避難者の二次避難が不可能となるケースもあります。
+<div class="engai">◎危険物流出型の火災
+</div>
+危険物が流出するなどして海上での大規模火災が継続するもので、船や瓦礫が回遊すると湾の周囲に延焼する、非常にリスクが高いものです。
+<div class="engai">◎電気系統単発出火型の火災
+</div>
+<div class="engai2">車や家屋の電気系統が津波の浸水により出火するもので、延焼免責はそれほど大きくありませんが、津波到達後時間が経過してからも継続的に発生する傾向にある火災です。
+</div>
+   <div class="sansho">
+  引用［8］地震に伴う津波火災の恐怖と企業が実施するべき対策  FASTALERT
+  </div>
+  <div class="engai"><b>〈津波火災における備え〉</b>
+</div>
+津波火災が発生した時に冷静な判断をとれるように私たちができることとして<span class="aka">ハザードマップ</span>を用いて自宅や学校、その周りにある建物の危険度をしっかり把握しておく必要があります。社会的取り組みとして津波火災が発生したことを想定した<span class="underlinered">避難手段の検討</span>や<span class="underlinered">消防戦術</span>といった対策を検討する必要があるのです。
+<div class="engai2">
+  <div class="sansho">
+  参照［9］全国の消防設備点検【全国消防点検.com】 (shobotenken.com)
+  </div>
+</div>
+<h2>参考文献</h2>
+[1] 農地の塩害と除塩 農村振興局  (maff.go.jp)
+<br>[2] TOHO LEO (2019) 津波により冠水した水田の塩害・除塩対策技術 | グリーンインフラの東邦レオ (greeninfrastructure.jp)
+<br>[3] 百年環境グループ (2019) 団粒構造とは？ 植物が良く育つ土壌に必要な要素と土の作り方 ｜ (100nen-kankyo.jp)
+<br>[4] (2016)農地で塩害が発生するメカニズムと除塩の有効性,具体的な方法 | (kaku-ichi.co.jp)
+<br>[5] (2012) 人的被害 : 防災情報のページ - 内閣府 (bousai.go.jp)
+<br>[6] (2017) 避難場所マップ・防災対策 (dk-kurashi.com)
+<br>[7] 津波火災現象の解明とその対策 | 地震本部 (jishin.go.jp)
+<br>[8] （2022）地震に伴う津波火災の恐怖と企業が実施するべき対策 | FASTALERT
+<br>[9] (2022) 全国の消防設備点検【全国消防点検.com】 (shobotenken.com)
+      </p>
+ </div>
+ <footer>
+  <div class="foot">
+   <p>代表者の連絡先：e2259105@soka-u.jp</p>
+   </div>
+</footer>
+</body>
+</html>
